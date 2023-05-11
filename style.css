@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+*{
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    background-color:rgb(51, 51, 189);
+}
+nav{
+    display: block;
+}
+nav > ul {
+    list-style-type: none;
+}
