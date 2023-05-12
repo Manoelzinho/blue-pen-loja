@@ -15,7 +15,6 @@
 </head>
 <body onresize="mudouTamanho()">
     <header>
-        <h1>Blue Pen</h1>
         <!-- MENU HTMl -->
         <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()" style="color: #ffffff;"></i>
         <nav id="itens">
@@ -26,6 +25,7 @@
                 <li><a href="#"><i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></a></li>
                 <li><a href="#">Ofertas do dia</a></li>
             </ul>
+                <input id="pesquisa" type="text" class="search-text" placeholder="Pesquisar">
         </nav>
     </header>
     <script>
@@ -36,6 +36,11 @@ function mudouTamanho(){
     } else {
         itens.style.display = 'none'
     }
+    if (window.innerWidth >= 768 ){
+        pesquisa.style.display = 'block'
+    } else {
+        pesquisa.style.display = 'none'
+    }
 }
 
         function clickMenu(){
@@ -45,6 +50,8 @@ function mudouTamanho(){
                 itens.style.display = 'block'
            }
         }
+
+
     </script>
 </body>
 </html>
