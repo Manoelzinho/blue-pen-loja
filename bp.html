@@ -14,10 +14,10 @@
     <title>loja-blue-Pen</title>
 </head>
 <body onresize="mudouTamanho()">
-    <header>
+  <header>
         <!-- MENU HTMl -->
         <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()" style="color: #ffffff;"></i>
-        <nav id="itens">
+        <nav id="itens">  
             <ul>
                 <li><a href="#"> Entrar</a></li>
                 <li><a href="#"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a></li>
@@ -25,9 +25,17 @@
                 <li><a href="#"><i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></a></li>
                 <li><a href="#">Ofertas do dia</a></li>
             </ul>
-                <input id="pesquisa" type="text" class="search-text" placeholder="Pesquisar">
+            <div class="search-box">
+                <input type="text" class="search-text" placeholder="Pesquisar">
+                <a class="search-btn">  
+               <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
         </nav>
-    </header>
+ </header>
+
+ <h2>CATEGORIAS:</h2>
+<div style="top:285px; left:540px; position: absolute;color: black"></div>
+
     <script>
 
 function mudouTamanho(){
@@ -37,9 +45,9 @@ function mudouTamanho(){
         itens.style.display = 'none'
     }
     if (window.innerWidth >= 768 ){
-        pesquisa.style.display = 'block'
+        search-box.style.display = 'block'
     } else {
-        pesquisa.style.display = 'none'
+        search-box.style.display = 'none'
     }
 }
 
