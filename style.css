@@ -49,6 +49,15 @@ a:link, a:visited,  a:hover, a:active{
     text-decoration: none;
 }
 
+#botao{
+  border: none;
+  background-color: rgb(51, 51, 189);
+  cursor: pointer;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+}
 
 .dropdown {
     position: relative;
@@ -77,9 +86,10 @@ a:link, a:visited,  a:hover, a:active{
     display: block;
   }
   
-  .dropdown:hover .dropbtn {
-    background-color:rgba(77, 83, 194, 0.772);
+  .dropdown:hover #botao {
+    background-color:rgb(42, 42, 117);
   }
+
 
   h2{
     font-family:Bebas Neue, cursive; 
@@ -91,4 +101,6 @@ a:link, a:visited,  a:hover, a:active{
 
    #botão{
     position: absolute;
+    top : 0%;
+    right: 3%;
    }

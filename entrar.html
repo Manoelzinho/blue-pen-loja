@@ -6,117 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stile.css">
+    <link rel="stylesheet" href="media-query.css">
     <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
     <title>log in</title>
      <style>
-      *{ margin: 0; padding: 0; }
+@charset "UTF-8";
 
-        body{
-            background-image: linear-gradient(rgb(36, 36, 218));
-        }
-
-        #menu-h{
-  background-color: rgba(44, 51, 181, 0.943);
-  font-family: 'Ubuntu', sans-serif;
- }
-
-       #menu-h ul{
-  max-width: 950px;
-  list-style: none;
-  background-color: rgba(44, 51, 181, 0.943);
-  padding: 0;
- }
-
-      #menu-h li{
-  display:inline;
- }
-
-      #menu-h li a{
-  color: aliceblue;
-  display: inline-block;
-  text-decoration: none;
-  padding: 20px;
- }
-
-     #menu-h li a:hover{
-  background-color: rgba(77, 83, 194, 0.772);
+body{
+  background-image: linear-gradient(rgb(36, 36, 218));
 }
 
-
-.search-box {
-    position: absolute;
-   top: 8px;
-   right: 160px;
-   background: hsl(0, 0%, 100%);
-   height: 45px;
-   width: 270px;
-   padding: 10px;
-   border-radius: 30px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+*{
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
-.search-text {
-    background: none;
-    border: 0;
-    outline: 0;
-}
-
-.btn {
-    background: none;
-    border: 0;
-    outline: 0;
-    }
-
-#lh{
-  width: 100%;
-  border: 4px solid;
-  color: rgba(44, 51, 181, 0.943);
-}
-
  
-.dropbtn {
-  background-color: rgba(44, 51, 181, 0.943);
-  color: white;
-  padding: 20px;
-  font-size: 16px;
+
+header{
+    background-color:rgb(51, 51, 189);
+}
+
+i#burguer{
+    background-color: rgb(53, 53, 175);
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+i#burguer:hover{
+    background-color: rgb(14, 14, 55);
+}
+
+nav{
+    display: none;
+    
+}
+nav > ul {
+    list-style-type: none;
+    
+}
+
+nav > ul > li > a{
+    font-size: 110%;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-top: 2px solid rgb(71, 71, 210);;
+}
+nav > ul > li > a:hover{
+    background-color: rgb(42, 42, 117);
+}
+a:link, a:visited,  a:hover, a:active{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#botao{
   border: none;
+  background-color: rgb(51, 51, 189);
   cursor: pointer;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-}
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover #botao {
+    background-color:rgb(42, 42, 117);
+  }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+   #botão{
+    position: absolute;
+    top : 0%;
+    right: 3%;
+   }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color:rgba(77, 83, 194, 0.772);
-}
- 
 .telalogin{
   background-color: rgba(44, 51, 181, 0.943);
   position: absolute;
@@ -163,46 +160,47 @@
 
   </style>
 </head>
-<body style="background-color:white">
-    <div style="text-align: center;">
-    <nav id="menu-h">
-        <ul>
-          
-          <div class="dropdown">
-        <button class="dropbtn"><i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i></button>
-        <div class="dropdown-content">
-        <a href="#">Todos produtos</a>
-        <a href="#">Atendimento ao cliente</a>
-        <a href="#">Sobre nós</a>
-        <a href="#"><b>Manoel 🖋️</b></a>
-        </div>
-      </div>
-      
-          <li><a href="index.html">Home</a></li>
-      
-          <li><a href="carrinho.html"><i class="fa-sharp fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i></a></li>
-      
-          <li><a href="favoritos.html"><i class="fa-solid fa-heart fa-lg" style="color: #ffffff;"></i></a></li>
-      
-          <li><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping fa-lg" style="color: #ffffff;"></i></a></li>
-      
-          <li><a href="sobrenos.html">Ofertas do dia</a></li>
-      
-        </ul>
-      </nav>
-      </div>
-      <div style="left:0px; top:-19px; position:absolute;">
-        <img src="imagens/picwish.png" height="235px" width="235px">
-          </div>
-      
-          <div class="search-box">
-            <input type="text" class="search-text" placeholder="Pesquisar">
-            <a class="search-btn">  
-           <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-         </div>
-         <div style="top: 10px; right: 19px; position: absolute;">
-          <img src="imagens/BLUE_PEN-removebg-preview.png" height="50px" width="100px">
-         </div>
+
+<body onresize="mudouTamanho()">
+  <header>
+        <!-- MENU HTMl -->
+
+        <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()" style="color: #ffffff;"></i>
+
+    <nav id="itens"> 
+        <div style="text-align: center;"></div> 
+            <ul>      
+           <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+           <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+           <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+           <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+                <li><a href="bp.html">Home</a></li>
+
+        <div class="dropdown">
+
+                 <button id="botao"><i class="fa-sharp fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                 
+                    <div class="dropdown-content">
+                        
+                    <a href="#">Todos produtos</a>
+
+                    <a href="#">Atendimento ao cliente</a>
+
+                    <a href="#">Sobre nós</a>
+
+                    <a href="#"><b>Manoel 🖋️</b></a>
+        </div> 
+                </div>
+                <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a></li>
+                <li><a href="favoritos.html"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></li>
+                <li><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></a></li>
+                <li><a href="#">Ofertas do dia</a></li>
+                <img id="botão" src="imagens/BLUE_PEN-removebg-preview.png" height="40" width="100">
+            </ul>
+            
+    </nav>
+ </header>
+
         <div id="lh"></div>
         <br>
         <br>
@@ -218,8 +216,35 @@
      </div>
      <div class=conta>Não tem uma conta?</div>   
      <div class=link><br><a href="#Criarconta">Clique aqui</href></a></div>
-    
- 
-    
+     <script>
+
+      function mudouTamanho(){
+          if (window.innerWidth >= 768 ){
+              itens.style.display = 'block'
+          } else {
+              itens.style.display = 'none'
+          }
+          if (window.innerWidth >= 768 ){
+              botão.style.display = 'block'
+          } else {
+              botão.style.display = 'none'
+          }
+          if (window.innerWidth >= 768 ){
+              botao.style.display = 'block'
+          } else {
+              botao.style.display = 'none'
+          }
+      }
+          
+              function clickMenu(){
+                 if(itens.style.display == 'block') {
+                      itens.style.display = 'none'
+                 } else {
+                      itens.style.display = 'block'
+                 }
+              }
+      
+      
+          </script>
 </body>
 </html>
