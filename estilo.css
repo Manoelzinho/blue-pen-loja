@@ -202,6 +202,7 @@ a:link, a:visited,  a:hover, a:active{
   left: 4.6%;
   line-height: 50%;
   position:relative;
+  border-radius: 40px;
 }
 
 #hr2{
@@ -246,3 +247,39 @@ a:link, a:visited,  a:hover, a:active{
   margin-top: -28%;
   margin-bottom: 2%;
 }
+
+.marketing {
+  display: flex;
+}
+
+.merketing2{
+  display: inline;
+}
+
+p{
+  position: relative;
+  left: 16%;
+  font-size: 114%;
+}
+
+.audio0{
+  left: 16%;
+  position: relative;
+}
+
+.nsei{
+  width: 15%;
+  height: 20%;
+  position: relative;
+  left: -7%
+}
+
+.hr3{
+  background-color: rgb(1, 1, 21);
+  width: 70%;
+  height: 3px;
+  position: relative;
+  left: 30%
+}
+
+  
