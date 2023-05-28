@@ -260,7 +260,7 @@ a:link, a:visited,  a:hover, a:active{
 p{
   position: relative;
   margin-left: 16%;
-  font-size: 114%;
+  font-size: 120%;
 }
 
 .audio0{
@@ -276,4 +276,92 @@ p{
 }
 
 
+.produtos {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color:black;
+}
+
+.produto {
+  width: 30%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: black;
+}
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.preco {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  position: relative;
+  margin-left: 2%;
+}
+
+.botoes{
+  display: flex;
+}
+
+.botaoo {
+  display: block;
+  background-color: #1100ff;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px;
+  width: 76%;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  position: relative;
+  left: 4%;
+}
+
+
+.botaoc {
+  background-color: #1100ff;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 7px;
+  border: none;
+  transition: background-color 0.2s ease;
+  position: relative;
+  left: 2%;
+}
+
+.botao:hover {
+  background-color:rgb(42, 42, 117);
+  color: white;
+}
+
+.botaoc:hover {
+  background-color:rgb(42, 42, 117);
+}
+
+.hr1{
+  position: relative;
+  left: 1%;
+  margin-top: 1.4%;
+  height: 2px;
+}
+
+.produto h3{
+  position: relative;
+  left: 2%;
+  top: -3%;
+}
+
+.produtos font{
+  font-size: 190%;
+}
   
