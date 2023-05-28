@@ -89,7 +89,7 @@
 <div class="marketing">
     <img src="imagens/20230424_0746491.gif" class="mkt1">
     <div class="marketing2">
-        <p>Se você é um fã do Manoel Gomes, <b>vulgo caneta azul</b>, você está no lugar certo!<br><br>Aqui você encontra itens incríveis, únicos e divertidos.
+        <p id="p">Se você é um fã do Manoel Gomes, <b>vulgo caneta azul</b>, você está no lugar certo!<br><br>Aqui você encontra itens incríveis, únicos e divertidos.
         <br><br>Já ouviu a clássica do Manoel hoje? Não?<br> Ouça enquanto olha nossos produtos!🖋️😼<br>pss.. esses preços estão ótimos</p>
         <br>
         <br>
@@ -102,12 +102,11 @@
         <br>
         <br>
         <br>
-        <hr class="hr3">
     </div>   
         <br>
         <br>
         <br>
-       <img src="imagens/picwish.png" class="nsei">  
+       <img src="imagens/picwish.png" id="nsei">  
 </div>
 
 <!-- FOOTER HTML -->
@@ -129,6 +128,11 @@ function mudouTamanho(){
         botao.style.display = 'block'
     } else {
         botao.style.display = 'none'
+    }
+    if (window.innerWidth >= 992 ){
+        nsei.style.display = 'block'
+    } else {
+        nsei.style.display = 'none'
     }
 }
     

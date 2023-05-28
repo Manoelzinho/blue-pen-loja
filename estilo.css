@@ -254,11 +254,12 @@ a:link, a:visited,  a:hover, a:active{
 
 .merketing2{
   display: inline;
+  position: relative;
 }
 
 p{
   position: relative;
-  left: 16%;
+  margin-left: 16%;
   font-size: 114%;
 }
 
@@ -267,19 +268,12 @@ p{
   position: relative;
 }
 
-.nsei{
+#nsei{
   width: 15%;
   height: 20%;
   position: relative;
   left: -7%
 }
 
-.hr3{
-  background-color: rgb(1, 1, 21);
-  width: 70%;
-  height: 3px;
-  position: relative;
-  left: 30%
-}
 
   
