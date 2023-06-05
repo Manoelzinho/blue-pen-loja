@@ -116,11 +116,12 @@ a:link, a:visited,  a:hover, a:active{
 
 .telalogin{
   background-color: rgba(44, 51, 181, 0.943);
-  position: absolute;
-  top: 30%;
+  position: relative;
   left: 36%;
   padding: 80px;
   border-radius: 15px;
+  width: 350px;
+  margin: 0;
 }
 
 .login{
@@ -146,17 +147,39 @@ a:link, a:visited,  a:hover, a:active{
 
 .conta{
   color: #f1f1f1;
-  position: absolute;
   left: 543px;
   top: 520px; 
 }
 
 .link{
-  position: absolute;
   left: 572px;
   top: 530px;
 }
 
+footer {
+  position: absolute;
+  bottom: -500px;
+  left:0;
+    background-color: hsl(0, 3%, 18%);
+    color: white;
+    width: 100%;
+    height: 140px;    
+    text-align: center;
+    margin: 0%; 
+  }
+  
+  .Footer ul li {
+    display: flex;
+    margin-top: 7px;
+    padding-bottom: 3px;
+    margin-right: 100px;
+  }
+  
+  li:link, li:visited,  li:hover, li:active{
+    color: aliceblue;
+    text-decoration: none;
+  }
+  
 
   </style>
 </head>
@@ -194,7 +217,7 @@ a:link, a:visited,  a:hover, a:active{
                 <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a></li>
                 <li><a href="favoritos.html"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></li>
                 <li><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></a></li>
-                <li><a href="#">Ofertas do dia</a></li>
+                <li><a href="ofertasdia.html">Ofertas do dia</a></li>
                 <img id="botão" src="imagens/BLUE_PEN-removebg-preview.png" height="40" width="100">
             </ul>
             
@@ -208,14 +231,26 @@ a:link, a:visited,  a:hover, a:active{
         <br>
         <br>
         <br>
-     <div class=telalogin>
+<div class=telalogin>
       <div><font size=7 color="white" face="arial">Login</font></div>
         <input class=login type="text" placeholder="Nome de Usuário"><br><br>
         <input class=login type="password" placeholder="Senha"><br><br>
         <button class="b">Entrar</button><br><br>  
-     </div>
+     
      <div class=conta>Não tem uma conta?</div>   
      <div class=link><br><a href="#Criarconta">Clique aqui</href></a></div>
+</div>
+     <footer>
+      <ul>
+          <li></li>
+          <li></li>
+          <li><a href="#">Serviços<a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Termos</a></li>
+          <li><a href="#">Politica de privacidade</a></li>
+      </ul>
+  </footer>
+  
      <script>
 
       function mudouTamanho(){

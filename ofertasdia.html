@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/cssbootstrap.min.css">
     <link rel="icon" type="image/png" href="imagens/picwish.png"/>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Madurai:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
@@ -15,237 +15,545 @@
     <title>Ofertas do dia</title>
 
     <style>
-     
-     .box{
-        position: relative;
-        width: 1300px;
-        height: 800px;
-        border-radius: 10px;
-        background-color: #d6d6d6;
-        margin: auto;
-        margin-right: 32px;
-     }
-     .box img{
-        border-radius: 50%;
-        float: left;
-        margin-left: 2px;
-        margin-right: 37px;
-        margin-top: 50px;
-     }
+      
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu&display=swap');
+*{
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    background-color:rgb(51, 51, 189);
+}
+
+i#burguer{
+    background-color: rgb(53, 53, 175);
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+i#burguer:hover{
+    background-color: rgb(14, 14, 55);
+}
+
+nav{
+    display: none;
     
+}
+nav > ul {
+    list-style-type: none;
     
-     .marketing img{
-      margin-left: 1px;
-        width: 22%;
-        height: 30%;
-     }
-     
-     .img1:hover::after{
-        content: "R$100";
-        position: absolute;
-        top: 170px;
-        left: 100px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
-        padding: 10px;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
+}
 
-     }
+nav > ul > li > a{
+    font-size: 110%;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-top: 2px solid rgb(71, 71, 210);;
+}
+nav > ul > li > a:hover{
+    background-color: rgb(42, 42, 117);
+}
 
-     .img2:hover::after{
-        content: "R$100";
-        position: absolute;
-        top: 170px;
-        left: 440px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
-        padding: 10px;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
+a:link, a:visited,  a:hover, a:active{
+    color: aliceblue;
+    text-decoration: none;
+}
 
-     }
+#botao{
+  border: none;
+  background-color: rgb(51, 51, 189);
+  cursor: pointer;
+  font-size: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 10px;
+}
 
-     .img3:hover::after{
-        content: "R$29";
-        position: absolute;
-        top: 170px;
-        left: 750px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
-        padding: 10px;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover #botao {
+    background-color:rgb(42, 42, 117);
+  }
 
-     }
+ #botão{
+    position: absolute;
+    top : 0%;
+    right: 3%;
+   }
 
-     .img4:hover::after{
-        content: "R$36";
-        position: absolute;
-        top: 170px;
-        left: 1090px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
-        padding: 10px;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
 
-     }
-
-     .img5:hover::after{
-        content: "R$20";
-        position: absolute;
-        top: 500px;
-        left: 110px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
-        padding: 10px;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
-
-     }
-
-     .img6:hover::after{
-        content: "R$120";
-        position: absolute;
-        top: 500px;
-        left: 440px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
-        padding: 10px;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
-
-     }
-
-     .img7:hover::after{
-        content: "R$200";
-        position: absolute;
-        top: 500px;
-        left: 760px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
-        padding: 10px;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
-
-     }
-
-     .img8:hover::after{
-        content: "R$60";
-        position: absolute;
-        top: 500px;
-        left: 1090px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
-        padding: 10px;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
+     footer {
+  position: absolute;
+  bottom: -1400px;
+  left:0;
+    background-color: hsl(0, 3%, 18%);
+    color: white;
+    width: 100%;
+    height: 140px;    
+    text-align: center;
+    margin: 0%; 
+  }
+  
+  .Footer ul li {
+    display: flex;
+    margin-top: 7px;
+    padding-bottom: 3px;
+    margin-right: 100px;
+  }
+  
+  li:link, li:visited,  li:hover, li:active{
+    color: aliceblue;
+    text-decoration: none;
+  }
+  
+  h2{
+    font-family:Bebas Neue, cursive; 
+   text-align: center;
+    font-size: 200%;
+    position: relative; 
+    color:black;
+   }
+   .produtos {
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          color:black;
+        }
         
+        .produtos1 {
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          color:black;
+        }
+        
+        .produto {
+          width: 28%;
+          background-color: #fff;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          padding: 20px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          color: black;
+        }
+        
+        .produto img {
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+        }
+        
+        .preco {
+          font-size: 1.2em;
+          margin-bottom: 10px;
+        }
+        
+        .botoes{
+          display: flex;
+        }
 
-     }
+        .botao {
+          display: block;
+          background-color: #1100ff;
+          color: #fff;
+          text-decoration: none;
+          text-align: center;
+          padding: 8px;
+          width: 76%;
+          border-radius: 5px;
+          transition: background-color 0.2s ease;
+        }
 
-   
-     .test :hover{
-      -webkit-transform: scale(1.05);
-       transform: scale(1.05);   
-       -webkit-transition: -webkit-transform .5s ease;
-      transition: transform .5s ease;
-     }
+        
+        .botaoc {
+          background-color: #1100ff;
+          text-decoration: none;
+          padding: 8px;
+          border-radius: 7px;
+          border: none;
+          transition: background-color 0.2s ease;
+          position: relative;
+          left: -2%;
+        }
+        
+        .botao:hover {
+          background-color:rgb(42, 42, 117);
+          color: white;
+        }
+        
+        .botaoc:hover {
+          background-color:rgb(42, 42, 117);
+        }
+
+        
+  h2{
+    font-family:Bebas Neue, cursive; 
+   text-align: center;
+    font-size: 200%;
+    position: relative; 
+    color:black;
+   }
+
+   #hr1{
+    position: relative;
+    left: 44.9%;
+    background-color: black;
+    height: 3px;
+    width: 10%
+   }
+
+   .vimg{ 
+    margin-top: -1%;
+    left: 2%; 
+    width: 40%;
+    height: 40%;
+    overflow: hidden;
+    position: relative;
+ }
+ 
+ .vimg img{
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+ }
+ .vimg:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+ }
+
+ 
+.cimg{
+  margin-top: -1.4%;
+  left:27%; 
+  width: 40%;
+  height: 40%;
+  overflow: hidden;
+  position: relative;
+}
+
+.cimg img{
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+.cimg:hover img{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+.pimg{
+  margin-top: -3%;
+  right:22.5%; 
+  width: 40%;
+  height: 40%;
+  overflow: hidden;
+  position: relative;
+}
+
+.pimg img{
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+.pimg:hover img{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.fimg{
+  margin-top: 1%;
+  left:-1%; 
+  width: 40%;
+  height: 40%;
+  overflow: hidden;
+  position: relative;
+}
+
+.fimg img{
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+.fimg:hover img{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#dacertoplmds{
+  display: flex;
+  background-color:  rgba(229, 229, 229, 0.735);
+  max-width: 90%;
+  left: 4.6%;
+  line-height: 50%;
+  position:relative;
+  border-radius: 40px;
+}
+
+#hr2{
+  background-color: rgb(51, 51, 189);
+  color:rgb(51, 51, 189);
+  height : 5px;
+  width: 99.9%;
+}
+
+
+.textvimg{
+  left: 36%; 
+  position: relative;
+  margin-bottom: 1%;
+  margin-top: -20%;
+}
+
+.textcimg{
+  left: 37%; 
+  position: relative;
+  margin-bottom: 4%;
+  margin-top: -18%;
+}
+
+.textpimg{
+  left: 38%; 
+  position: relative;
+  margin-bottom: 7%;
+  margin-top: -12%;
+}
+
+.textfimg{
+  left: 34%; 
+  position: relative;
+  margin-top: -28%;
+  margin-bottom: 2%;
+}
+
 
     </style>
 
-
-
-
 </head>
- <body onresize="mudouTamanho()">
-        <header>
-              <!-- MENU HTMl -->
-      
-              <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()" style="color: #ffffff;"></i>
-      
-          <nav id="itens"> 
-              <div style="text-align: center;"></div> 
-                  <ul>      
-                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
-                      <li><a href="entrar.html"> Entrar</a></li>
-      
-              <div class="dropdown">
-      
-                       <button id="botao"><i class="fa-sharp fa-solid fa-plus" style="color: #ffffff;"></i></button>
-                       
-                          <div class="dropdown-content">
-                              
-                          <a href="#">Todos produtos</a>
-      
-                          <a href="#">Atendimento ao cliente</a>
-      
-                          <a href="#">Sobre nós</a>
-              </div> 
-                      </div>
-                      <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a></li>
-                      <li><a href="favoritos.html"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></li>
-                      <li><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></a></li>
-                      <li><a href="#">Ofertas do dia</a></li>
-                      <img id="botão" src="imagens/BLUE_PEN-removebg-preview.png" height="40" width="100">
-                  </ul>
-       </nav>
-       </header>
-       <br>
-              <hr id="hr2"> 
-          <!-- CATEGORIAS HTML -->
-          <br>
-          <br>
-          <br>            
-       <h2>Ofertas Do Dia</h2>
-       <br>
-       <br>
-       <br>
-       <br>
-
-
-       <div class="marketing">
-        <img src="imagens/20230424_0746491.gif" class="mkt1">
-        <div class="marketing2">
+ <body<body onresize="mudouTamanho()">
+   <header>
+         <!-- MENU HTMl -->
+ 
+         <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()" style="color: #ffffff;"></i>
+ 
+     <nav id="itens"> 
+         <div style="text-align: center;"></div> 
+         <ul>      
+            <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+            <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+            <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+            <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+            <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+                 <li><a href="entrar.html"> Entrar</a></li>
+ 
+         <div class="dropdown">
+ 
+                  <button id="botao"><i class="fa-sharp fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                  
+                     <div class="dropdown-content">
+                         
+                     <a href="#">Todos produtos</a>
+ 
+                     <a href="#">Atendimento ao cliente</a>
+ 
+                     <a href="#">Sobre nós</a>
+         </div> 
+                 </div>
+                 <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a></li>
+                 <li><a href="favoritos.html"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></li>
+                 <li><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></a></li>
+                 <li><a href="bp.html">home</a></li>
+                 <img id="botão" src="imagens/BLUE_PEN-removebg-preview.png" height="40" width="100">
+             </ul>
+  </nav>
+  </header>       
+  <br>
+  <br>   
+  <h2>COMPRE POR CATEGORIAS:</h2>
+ <hr id="hr1">
+ <br>
+<div id="dacertoplmds">
+    <div class="vimg">
+        <a href="categoria_vestuario.html"><img src="imagens/categoria01.png"></a>
+        <h4 class="textvimg">Vestuário</h4>
     </div>
-       
-    <div class="box">
-      <div class="test">
-        <div class="img1">
-            <img src="imagens/25 Sem Título_20230401174543.png" class="imagem">
+    <div class="cimg">
+        <a href="categoria_casa.html"><img src="imagens/categoria02.png"></a>
+        <h4 class="textcimg">Pessoais</h4>
+    </div>
+    <div class="pimg">
+        <a href="categoria_pessoal.html"><img src="imagens/categoria03.png" ></a>
+        <h4 class="textpimg">Casa</h4>
+    </div>
+    <div class="fimg">
+        <a href="categoria_especial.html"><img src="imagens/categoria04.png" ></a>
+        <h4 class="textfimg">Especiais</h4>
+    </div>
+</div>
+<br>
+<br>
+<br>
+    <h2>OFERTAS DO DIA</h2>
+    </div>
+    <div class="produtos">
+      <div class="produto">
+        <img src="imagens/20 Sem Título_20230401172933.png">
+        <div style="color: black;">
+        <h3>Kit Cosplay Manoel Gomes</h3>
+        <p class="preco"><br>De R$ 600,00 por R$ 599,99</p>    
         </div>
-        <div class="img2">
-        <img src="imagens/25 Sem Título_20230401174604.png" class="imagem">
-        </div>
-        <div class="img3">
-        <img src="imagens/17 Sem Título.png" class="imagem">
-        </div>
-
-        <div class="img4">
-        <img src="imagens/18 Sem Título.jpg" class="imagem">
-        </div>
-        
-        <div class="img5">
-        <img src="imagens/23 Sem Título_20230401174206.png" class="imagem">
-        </div>
-
-        <div class="img6">
-        <img src="imagens/25 Sem Título_20230401174730.png" class="imagem">
-        </div>
-
-        <div class="img7">
-        <img src="imagens/24 Sem Título_20230401174504.png" class="imagem">
-        </div>
-
-        <div class="img8">
-        <img src="imagens/21 Sem Título_20230401173141.png" class="imagem">
+        <div class="botoes">
+        <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
+        <a href="#" class="botao">Comprar</a>
         </div>
       </div>
+
+      <div class="produto">
+        <img src="imagens/25 Sem Título_20230401174543.png">
+        <h3>Camiseta Manoel Gomes Violão</h3>
+        <p class="preco"><br>De R$ 149,99 por R$ 159,99</p>
+        <div class="botoes">
+          <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
+          <a href="#" class="botao">Comprar</a>
+          </div>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/25 Sem Título_20230401174604.png" >
+        <h3>Camiseta Manoel Gomes</h3>
+        <p class="preco"><br><br>De R$ 149,90 por R$ 159,99</p>
+        <div class="botoes">
+          <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
+          <a href="#" class="botao">Comprar</a>
+          </div>
+      </div>
     </div>
-    </body>
-</html>
+<br>
+<br>
+  <div class="produtos1">
+    <div class="produto">
+      <img src="imagens/25 Sem Título_20230401174812.png">
+      <div style="color: black;">
+      <h3>Camiseta manoel gomes tocando feminina</h3>
+      <p class="preco"><br>De R$ 100,00 por R$ 99,99</p>
+      </div>
+      <div class="botoes">
+        <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
+        <a href="#" class="botao">Comprar</a>
+        </div>
+    </div>
+
+    <div class="produto">
+      <img src="imagens/25 Sem Título_20230401174833.png">
+      <h3>Camiseta Manoel Gomes Violão feminina</h3>
+      <p class="preco"><br>De R$ 149,99 por R$ 159,99</p>
+      <div class="botoes">
+        <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
+        <a href="#" class="botao">Comprar</a>
+        </div>
+    </div>
+
+    <div class="produto">
+      <img src="imagens/25 Sem Título_20230401174730.png" >
+      <h3>Camiseta Caneta Azul feminina</h3>
+      <p class="preco"><br>De R$ 99,90 por R$ 79,99</p>
+      <div class="botoes">
+        <button class="botaoc"><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i><a href="#"><i class="fa-solid fa-heart" style="color: #ffffff;"></i><i id=dropbtn class="fa-solid fa-plus" style="color:#1100ff;"></i></a></button>
+        <a href="#" class="botao">Comprar</a>
+        </div>
+    </div>
+  </div>
+       
+
+    <footer>
+      <ul>
+          <li></li>
+          <li></li>
+          <li><a href="#">Serviços<a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Termos</a></li>
+          <li><a href="#">Politica de privacidade</a></li>
+      </ul>
+  </footer>
+    <script>
+
+      function mudouTamanho(){
+          if (window.innerWidth >= 768 ){
+              itens.style.display = 'block'
+          } else {
+              itens.style.display = 'none'
+          }
+          if (window.innerWidth >= 768 ){
+              botão.style.display = 'block'
+          } else {
+              botão.style.display = 'none'
+          }
+          if (window.innerWidth >= 768 ){
+              botao.style.display = 'block'
+          } else {
+              botao.style.display = 'none'
+          }
+          if (window.innerWidth >= 992 ){
+              nsei.style.display = 'block'
+          } else {
+              nsei.style.display = 'none'
+          }
+      }
+          
+              function clickMenu(){
+                 if(itens.style.display == 'block') {
+                      itens.style.display = 'none'
+                 } else {
+                      itens.style.display = 'block'
+                 }
+              }
+      
+      
+          </script>
+      </body>
+      </html>
