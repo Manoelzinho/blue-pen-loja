@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/cssbootstrap.min.css">
+    <link rel="icon" type="image/png" href="imagens/picwish.png"/>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Madurai:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="media-query.css">
+    <script src="https://kit.fontawesome.com/ccf50dfefd.js" crossorigin="anonymous"></script>
+    <title>Ofertas do dia</title>
+
+    <style>
+     
+     .box{
+        position: relative;
+        width: 1300px;
+        height: 800px;
+        border-radius: 10px;
+        background-color: #d6d6d6;
+        margin: auto;
+        margin-right: 32px;
+     }
+     .box img{
+        border-radius: 50%;
+        float: left;
+        margin-left: 2px;
+        margin-right: 37px;
+        margin-top: 50px;
+     }
+    
+    
+     .marketing img{
+      margin-left: 1px;
+        width: 22%;
+        height: 30%;
+     }
+     
+     .img1:hover::after{
+        content: "R$100";
+        position: absolute;
+        top: 170px;
+        left: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+
+     }
+
+     .img2:hover::after{
+        content: "R$100";
+        position: absolute;
+        top: 170px;
+        left: 440px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+
+     }
+
+     .img3:hover::after{
+        content: "R$29";
+        position: absolute;
+        top: 170px;
+        left: 750px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+
+     }
+
+     .img4:hover::after{
+        content: "R$36";
+        position: absolute;
+        top: 170px;
+        left: 1090px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+
+     }
+
+     .img5:hover::after{
+        content: "R$20";
+        position: absolute;
+        top: 500px;
+        left: 110px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+
+     }
+
+     .img6:hover::after{
+        content: "R$120";
+        position: absolute;
+        top: 500px;
+        left: 440px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+
+     }
+
+     .img7:hover::after{
+        content: "R$200";
+        position: absolute;
+        top: 500px;
+        left: 760px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+
+     }
+
+     .img8:hover::after{
+        content: "R$60";
+        position: absolute;
+        top: 500px;
+        left: 1090px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        
+
+     }
+
+   
+     .test :hover{
+      -webkit-transform: scale(1.05);
+       transform: scale(1.05);   
+       -webkit-transition: -webkit-transform .5s ease;
+      transition: transform .5s ease;
+     }
+
+    </style>
+
+
+
+
+</head>
+ <body onresize="mudouTamanho()">
+        <header>
+              <!-- MENU HTMl -->
+      
+              <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()" style="color: #ffffff;"></i>
+      
+          <nav id="itens"> 
+              <div style="text-align: center;"></div> 
+                  <ul>      
+                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+                 <i id=dropbtn class="fa-solid fa-plus" style="color:rgb(51, 51, 189);"></i>
+                      <li><a href="entrar.html"> Entrar</a></li>
+      
+              <div class="dropdown">
+      
+                       <button id="botao"><i class="fa-sharp fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                       
+                          <div class="dropdown-content">
+                              
+                          <a href="#">Todos produtos</a>
+      
+                          <a href="#">Atendimento ao cliente</a>
+      
+                          <a href="#">Sobre nós</a>
+              </div> 
+                      </div>
+                      <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a></li>
+                      <li><a href="favoritos.html"><i class="fa-solid fa-heart" style="color: #ffffff;"></i></a></li>
+                      <li><a href="meuspedidos.html"><i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></a></li>
+                      <li><a href="#">Ofertas do dia</a></li>
+                      <img id="botão" src="imagens/BLUE_PEN-removebg-preview.png" height="40" width="100">
+                  </ul>
+       </nav>
+       </header>
+       <br>
+              <hr id="hr2"> 
+          <!-- CATEGORIAS HTML -->
+          <br>
+          <br>
+          <br>            
+       <h2>Ofertas Do Dia</h2>
+       <br>
+       <br>
+       <br>
+       <br>
+
+
+       <div class="marketing">
+        <img src="imagens/20230424_0746491.gif" class="mkt1">
+        <div class="marketing2">
+    </div>
+       
+    <div class="box">
+      <div class="test">
+        <div class="img1">
+            <img src="imagens/25 Sem Título_20230401174543.png" class="imagem">
+        </div>
+        <div class="img2">
+        <img src="imagens/25 Sem Título_20230401174604.png" class="imagem">
+        </div>
+        <div class="img3">
+        <img src="imagens/17 Sem Título.png" class="imagem">
+        </div>
+
+        <div class="img4">
+        <img src="imagens/18 Sem Título.jpg" class="imagem">
+        </div>
+        
+        <div class="img5">
+        <img src="imagens/23 Sem Título_20230401174206.png" class="imagem">
+        </div>
+
+        <div class="img6">
+        <img src="imagens/25 Sem Título_20230401174730.png" class="imagem">
+        </div>
+
+        <div class="img7">
+        <img src="imagens/24 Sem Título_20230401174504.png" class="imagem">
+        </div>
+
+        <div class="img8">
+        <img src="imagens/21 Sem Título_20230401173141.png" class="imagem">
+        </div>
+      </div>
+    </div>
+    </body>
+</html>
