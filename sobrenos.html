@@ -203,5 +203,34 @@ a:link, a:visited,  a:hover, a:active{
         </ul>
     </footer> 
         
+    <script>
+    function mudouTamanho(){
+      if (window.innerWidth >= 768 ){
+          itens.style.display = 'block'
+      } else {
+          itens.style.display = 'none'
+      }
+      if (window.innerWidth >= 768 ){
+          botão.style.display = 'block'
+      } else {
+          botão.style.display = 'none'
+      }
+      if (window.innerWidth >= 768 ){
+          botao.style.display = 'block'
+      } else {
+          botao.style.display = 'none'
+      }
+  }
+      
+          function clickMenu(){
+             if(itens.style.display == 'block') {
+                  itens.style.display = 'none'
+             } else {
+                  itens.style.display = 'block'
+             }
+          }
+  
+  
+      </script>
 </body>
 </html>
